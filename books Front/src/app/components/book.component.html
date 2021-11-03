@@ -1,0 +1,50 @@
+<h1 id="tableLabel">{{title}}</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <input type="text" formControlName="name" class="form-control" placeholder="Nombre">
+    <div class="errorForm" *ngIf="form.get('name')?.errors?.required">
+      Este campo es requerido
+    </div>
+    <div class="errorForm" *ngIf="form.get('name')?.errors?.maxlength">
+      Cantidad de caracteres excedida (40)
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="text" formControlName="author" class="form-control" placeholder="Autor">
+    <div class="errorForm" *ngIf="form.get('author')?.errors?.required">
+      Este campo es requerido
+    </div>
+    <div class="errorForm" *ngIf="form.get('author')?.errors?.maxlength">
+      Cantidad de caracteres excedida (30)
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="text" formControlName="pages" class="form-control" placeholder="Páginas">
+    <div class="errorForm" *ngIf="form.get('pages')?.errors?.required">
+      Este campo es requerido
+    </div>
+    <div class="errorForm" *ngIf="form.get('pages')?.errors?.maxlength">
+      Cantidad de caracteres excedida (4)
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="text" formControlName="editorial" class="form-control" placeholder="Editorial">
+    <div class="errorForm" *ngIf="form.get('editorial')?.errors?.required">
+      Este campo es requerido
+    </div>
+    <div class="errorForm" *ngIf="form.get('editorial')?.errors?.maxlength">
+      Cantidad de caracteres excedida (30)
+    </div>
+  </div>
+  <div class="form-group">
+    <input type="text" formControlName="gender" class="form-control" placeholder="Género">
+    <div class="errorForm" *ngIf="form.get('gender')?.errors?.required">
+      Este campo es requerido
+    </div>
+    <div class="errorForm" *ngIf="form.get('gender')?.errors?.maxlength">
+      Cantidad de caracteres excedida (20)
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary btnGrid">Guardar</button>
+  <button type="button" class="btn btn-danger" [routerLink]="['']">Cancelar</button>
+</form>

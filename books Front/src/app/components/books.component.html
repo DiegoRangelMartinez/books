@@ -1,0 +1,29 @@
+<h1 id="tableLabel">Libros</h1>
+<p *ngIf="books.length == 0"><em>Cargando...</em></p>
+<div>
+  <button class="btn btn-primary btnInsert" (click)="onclickInsertBook()">Agregar libro</button>
+</div>
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="books.length > 0">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Alpha 2</th>
+      <th>Alpha 3</th>
+      <th>Numérico</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <td>{{book.name}}</td>
+      <td style="width: 100px">{{book.author}}</td>
+      <td style="width: 100px">{{book.pages}}</td>
+      <td style="width: 100px">{{book.editorial}}</td>
+      <td style="width: 100px">{{book.gender}}</td>
+      <td style="width: 300px">
+        <button class="btn btn-secondary btnGrid" (click)="onclickUpdateBook(book.id)">Editar</button>
+        <button class="btn btn-danger btnGrid" (click)="onclickDeleteBook(book.id)">Borrar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

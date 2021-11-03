@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+a {
+  color: #0366d6;
+}
+code {
+  color: #e01a76;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+.btnGrid {
+  margin-right: 7px;
+}
+
+.btnInsert {
+  margin-bottom: 10px;
+}
+.errorForm {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: .875em;
+  color: #dc3545;
+}
